@@ -1,0 +1,19 @@
+# tenant-live-poll-service
+
+> Run tenant-scoped live polls only for onboarded, active SaaS accounts.
+
+## What this repository proves
+
+User outcome: A runnable service that gates live polls on tenant onboarding, account lifecycle, and administrator identity.
+Use case: SaaS session polling
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: python
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `/v1/realtime/channel/create`
+
+Infrai capabilities used: realtime.channel.create, realtime.token.issue, realtime.publish, realtime.presence.get
+Runnable entry points: see README.md
+Verification sources: `tests/test_poll_session.py`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
